@@ -1,8 +1,8 @@
-# diagnostico-de-salud-de-Maquinaria
+# diagnostico-de-salud-de-maquinaria
 Este repositorio contiene el desarrollo y las conclusiones de la evaluación de salud de maquinaria basada en datos de sensores (`sensor_operaciones.csv`).
 
 ## 📊 Práctica de Phyton: Análisis Operativo y Procesamiento de Telemetría en Bombas de Inyección Industrial
-Este repositorio contiene el desarrollo, la implementación en Python y el análisis de ingeniería del sistema de monitoreo automatizado para una bomba de inyección, utilizando datos transaccionales de sensores.
+En este proyecto realizado el curso Phyton para IA se desarrollo con la implementación en Python y el análisis de ingeniería para estudiar el sistema de monitoreo automatizado de una bomba de inyección, utilizando datos transaccionales de sensores.
 
 ## 🎯 1. Objetivos del Proyecto
 El sistema automatiza el monitoreo de condiciones operativas mediante el procesamiento secuencial de: 

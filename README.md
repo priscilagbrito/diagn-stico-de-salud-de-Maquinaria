@@ -62,3 +62,67 @@ Como analisa de datos y de procesos, observe un vacío crítico de control en la
 
 * **Propuesta de Mejora (Clasificación Multivariable)** Se recomienda actualizar el script en una Versión 2.0 que evalúe umbrales mínimos de presión:
             $$\text{Si } Presión < 2000\text{ psi} \rightarrow \text{Alerta de Cavitación (Riesgo Crítico)}$$
+
+Python
+
+  import csv
+
+def evaluar_estado(presion, temperatura):
+    """
+    Evalúa las variables de la bomba de inyección según los límites establecidos.
+    """
+    if presion > 3000 and temperatura > 150:
+        return "Crítico"
+    elif presion > 2500 or temperatura > 120:
+        return "Precaución"
+    else:
+        return "Normal"
+
+# Ruta local del archivo de telemetría (Google Colab / Local)
+archivo_ruta = 'sensor_tarea.csv'
+
+try:
+    with open(archivo_ruta, mode='r', encoding='utf-8') as archivo:
+        # Lectura segura utilizando el encabezado del CSV como llaves
+        lineas = csv.DictReader(archivo)
+        
+        # Inicialización de la estructura de control estadístico
+        conteo = {"Crítico": 0, "Precaución": 0, "Normal": 0}
+        
+        # Listas vacías para aislar telemetría bajo condiciones de estrés
+        presiones_anomalias = []
+        temperaturas_anomalias = []
+        
+        # Procesamiento secuencial fila por fila (Eficiente en memoria)
+        for linea in lineas:
+            p = float(linea['presion'])
+            t = float(linea['temperatura'])
+            
+            # Clasificación del registro
+            estado = evaluar_estado(p, t)
+            conteo[estado] += 1
+            
+            # Almacenamiento condicional en listas de anomalías
+            if estado != 'Normal':
+                presiones_anomalias.append(p)
+                temperaturas_anomalias.append(t)
+                
+except FileNotFoundError:
+    print(f"Error: El archivo '{archivo_ruta}' no fue encontrado. Verifique la ruta.")
+
+# --- CÁLCULO DE RESULTADOS Y MÉTRICAS DE CONTROL ---
+total_datos = sum(conteo.values())
+total_anomalias = conteo['Crítico'] + conteo['Precaución']
+
+if total_datos > 0:
+    porcentaje_anomalias = (total_anomalias / total_datos) * 100
+    print(f"Porcentaje de Anomalías: {porcentaje_anomalias:.2f}%")
+
+# Métricas de riesgo calculadas únicamente si se registraron fallas
+if total_anomalias > 0:
+    promedio_presion = sum(presiones_anomalias) / len(presiones_anomalias)
+    promedio_temperaturas = sum(temperaturas_anomalias) / len(temperaturas_anomalias)
+    
+    print(f"Promedio de Presión en condiciones de riesgo: {promedio_presion:.2f} psi")
+    print(f"Promedio de Temperatura en condiciones de riesgo: {promedio_temperaturas:.2f} °C")
+    print(f"Distribución del Conteo Final: {conteo}")

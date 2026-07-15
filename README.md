@@ -15,12 +15,12 @@ El sistema automatiza el monitoreo de condiciones operativas mediante el procesa
     
 ---
 
-## ⚙️ 2. Arquitectura de Reglas Operacionales: 
+## ⚙️ 2. Arquitectura de Reglas Operacionales  
 La clasificación del estado de la maquinaria se realiza bajo un modelo matricial de tres niveles, priorizando siempre las condiciones de riesgo combinado.
 
 --- 
 
-## 🐍 3. Mapa del Flujo de Datos: 
+## 🐍 3. Mapa del Flujo de Datos  
 El algoritmo está estructurado para optimizar la memoria y procesar de manera lineal (O(n)) filas de datos infinitas o desconocidas:
 * **Lectura Secuencial:** Captura fila por fila del archivo transaccional de sensores.
 * **Evaluación de Estado:** Ejecución de la lógica booleana sobre los parámetros de presión y temperatura.
@@ -31,7 +31,7 @@ El algoritmo está estructurado para optimizar la memoria y procesar de manera l
 
 --- 
 
-## 📈 4. Conclusiones y Métricas del Tablero: 
+## 📈 4. Conclusiones y Métricas del Tablero  
 Tras el procesamiento completo del archivo de sensores, se obtuvieron las siguientes métricas clave de diagnóstico:
 * **Distribución del Estado Frecuencial (Diccionario Conteo)**
 El volumen principal de operación se mantiene en rangos seguros, aunque con un margen de alerta considerable que requiere atención de mantenimiento.
@@ -54,7 +54,7 @@ Para clasificar al sistema en un Estado Crítico, la lógica matemática exige q
 
 ---
 
-## 🔍 6. Propuesta de Optimización: El Riesgo Oculto de la Cavitación: 
+## 🔍 6. Propuesta de Optimización: El Riesgo Oculto de la Cavitación  
 Como analisa de datos y de procesos, observe un vacío crítico de control en la lógica establecida por el algoritmo de software:
 **El Problema:** El script se enfoca exclusivamente en la sobrepresión (valores por encima de 2500 psi). Sin embargo, en campo se registran caídas de presión extremas (cercanas a 1800 psi).
 **El Fenómeno Físico:** Las caídas repentinas de presión en bombas de inyección suelen ser el síntoma principal de la cavitación (formación y colapso de burbujas de vapor dentro del fluido). La cavitación erosiona las paredes de la bomba, causa vibraciones destructivas y destruye el impulsor rápidamente.

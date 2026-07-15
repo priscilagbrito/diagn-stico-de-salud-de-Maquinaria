@@ -65,7 +65,11 @@ Como analisa de datos y de procesos, observe un vacío crítico de control en la
   
 ## 🛠️ 7. Habilidades Desarrolladas 
 **Procesamiento de Datos Estructurados:**  Dominio en la ingesta y manipulación de archivos planos utilizando la biblioteca estándar (csv) y lectura basada en diccionarios (DictReader). 
-**Lógica Algorítmica Eficiente:** Diseño de funciones modulares con estructuras de control condicionales anidadas (if-elif-else) para clasificar datos en tiempo real.   
+
+**Lógica Algorítmica Eficiente:** Diseño de funciones modulares con estructuras de control condicionales anidadas (if-elif-else) para clasificar datos en tiempo real.  
+
 **Control de Estructuras de Datos:** Uso correcto de diccionarios para almacenamiento de frecuencias (conteo de estados) y listas dinámicas para el aislamiento selectivo de variables de riesgo.  
+
 **Pensamiento Crítico y Detección de Sesgos**: Identifique las reglas propuestas por la teoría de la actividad que solo se enfocaban en la "sobrepresión", dejando un vacío de seguridad en las caídas de presión.  
+
 **Redacción de Reportes Técnicos:** Capacidad para estructurar conclusiones claras, justificando técnicamente el porqué un factor (temperatura) es más crítico que otro (presión) en el ciclo de vida del activo.

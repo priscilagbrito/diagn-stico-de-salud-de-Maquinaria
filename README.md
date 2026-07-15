@@ -62,3 +62,7 @@ Como analisa de datos y de procesos, observe un vacío crítico de control en la
 
 * **Propuesta de Mejora (Clasificación Multivariable)** Se recomienda actualizar el script en una Versión 2.0 que evalúe umbrales mínimos de presión:
             $$\text{Si } Presión < 2000\text{ psi} \rightarrow \text{Alerta de Cavitación (Riesgo Crítico)}$$
+  
+## 🛠️ 7. Habilidades Desarrolladas
+      Procesamiento de Datos Estructurados: Dominio en la ingesta y manipulación de archivos planos utilizando la biblioteca estándar (csv) y lectura basada en diccionarios (DictReader).
+      Lógica Algorítmica Eficiente: Diseño de funciones modulares con estructuras de control condicionales anidadas (if-elif-else) para clasificar datos en tiempo real.  Control de Estructuras de Datos: Uso correcto de diccionarios para almacenamiento de frecuencias (conteo de estados) y listas dinámicas para el aislamiento selectivo de variables de riesgo.

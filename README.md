@@ -2,12 +2,12 @@
 Este repositorio contiene el desarrollo y las conclusiones de la evaluación de salud de maquinaria basada en datos de sensores (`sensor_operaciones.csv`).
 
 ## 📊 Práctica de Phyton: Análisis Operativo y Procesamiento de Telemetría en Bombas de Inyección Industrial
-En este proyecto el objetivo fue procesar volúmenes variables de telemetría para luego clasificar los estados operativos, extraer las métricas de riesgo y finalmente se determino los factores críticos que provocan las fallas en equipos industriales.
+Este repositorio contiene el desarrollo, la implementación en Python y el análisis de ingeniería del sistema de monitoreo automatizado para una bomba de inyección, utilizando datos transaccionales de sensores.
 
 ## 🎯 1. Objetivos del Proyecto
 El sistema automatiza el monitoreo de condiciones operativas mediante el procesamiento secuencial de: 
    
-   * **Procesamiento de Flujo Lineal ($O(N)$):** Diseñar un algoritmo iterativo capaz de procesar archivos de datos de cualquier tamaño       sin saturar la memoria.
+   * **Procesamiento de Flujo Lineal:** Diseñar un algoritmo iterativo capaz de procesar archivos de datos de cualquier tamaño       sin saturar la memoria.
          
    *   **Aislamiento Estadístico:** Segregar los registros de estrés hídrico y térmico (anomalías) para calcular métricas enfocadas          únicamente en las zonas de riesgo.
      
